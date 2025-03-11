@@ -11,6 +11,7 @@ export APPIMAGE_EXTRACT_AND_RUN=1
 
 UPINFO="gh-releases-zsync|$(echo "$GITHUB_REPOSITORY" | tr '/' '|')|latest|*$ARCH.AppImage.zsync"
 LIB4BN="https://raw.githubusercontent.com/VHSgunzo/sharun/refs/heads/main/lib4bin"
+SHARUN="https://github.com/VHSgunzo/sharun/releases/latest/download/sharun-$ARCH"
 APPIMAGETOOL="https://github.com/pkgforge-dev/appimagetool-uruntime/releases/download/continuous/appimagetool-$ARCH.AppImage"
 
 # Prepare AppDir
@@ -34,8 +35,9 @@ Categories=System;TerminalEmulator;' > st.desktop
 touch ./st.png
 
 # ADD LIBRARIES
+wget "$SHARUN" -O ./sharun
 wget "$LIB4BN" -O ./lib4bin
-chmod +x ./lib4bin
+chmod +x ./lib4bin ./sharun
 xvfb-run -a -- ./lib4bin -p -v -e -s -k ./shared/bin/st
 
 # Prepare sharun
