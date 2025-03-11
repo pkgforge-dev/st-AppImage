@@ -12,5 +12,7 @@ It is possible that this appimage may fail to work with appimagelauncher, I reco
 
 * https://github.com/pkgforge/soar
 
+* https://github.com/xplshn/dbin
+
 This appimage works without fuse2 as it can use fuse3 instead, it can also work without fuse at all thanks to the [uruntime](https://github.com/VHSgunzo/uruntime)
 
