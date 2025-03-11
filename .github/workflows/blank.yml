@@ -18,9 +18,9 @@ jobs:
     - name: build
       if: always()
       run: |
-        apk add ncurses ncurses-terminfo-base font-liberation build-base \
-        ncurses-terminfo-base font-liberation fontconfig-dev freetype-dev \
-        libx11-dev libxext-dev libxft-dev xvfb-run git patchelf binutils
+        apk add coreutils bash ncurses ncurses-terminfo-base font-liberation build-base \
+        ncurses-terminfo-base font-liberation fontconfig-dev freetype-dev libx11-dev \
+        libxext-dev libxft-dev xvfb-run git patchelf binutils
 
         chmod +x ./*-appimage.sh && ./*-appimage.sh
         mkdir dist
