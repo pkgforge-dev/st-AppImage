@@ -18,7 +18,7 @@ jobs:
     - name: build
       if: always()
       run: |
-        apk add ncurses-terminfo-base font-liberation build-base \
+        apk add ncurses ncurses-terminfo-base font-liberation build-base \
         ncurses-terminfo-base font-liberation fontconfig-dev freetype-dev \
         libx11-dev libxext-dev libxft-dev xvfb-run git patchelf binutils
 
