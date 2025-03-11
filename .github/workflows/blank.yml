@@ -20,7 +20,7 @@ jobs:
       run: |
         apk add coreutils bash ncurses ncurses-terminfo-base font-liberation build-base \
         ncurses-terminfo-base font-liberation fontconfig-dev freetype-dev libx11-dev \
-        libxext-dev libxft-dev xvfb-run git patchelf binutils
+        libxext-dev libxft-dev xvfb-run git patchelf binutils strace
 
         chmod +x ./*-appimage.sh && ./*-appimage.sh
         mkdir dist
