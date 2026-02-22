@@ -11,6 +11,8 @@ export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}
 export ICON=https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/702499f331aa9c38309e1af99de4021013916297/Papirus/64x64/apps/st.svg
 export DEPLOY_OPENGL=0
 export DEPLOY_VULKAN=0
+export ANYLINUX_LIB=1
+export URUNTIME_PRELOAD=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/st
