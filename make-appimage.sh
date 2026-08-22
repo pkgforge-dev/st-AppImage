@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 VERSION=$(pacman -Q st | awk '{print $2; exit}') # example command to get version of application here
 export ARCH VERSION
 export OUTPATH=./dist
-export ADD_HOOKS="self-updater.bg.hook"
+export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-icon-theme/702499f331aa9c38309e1af99de4021013916297/Papirus/64x64/apps/st.svg
 export DEPLOY_OPENGL=0
